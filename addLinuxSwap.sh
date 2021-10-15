@@ -3,7 +3,9 @@
 echo "which swap size you want: ...G"
 
 read -r size
-size+='G'
+
+size=$size"G"
+
 sudo fallocate -l $size /swapfile
 
 echo $size
